@@ -1,0 +1,118 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background-image: url(../img/bg.png);
+	overflow: auto;
+}
+.div1{
+	width: 1000px;
+	height:600px;
+	background-color: #AAD5E6;
+	margin: 50px 175px ;
+	position: absolute;
+}
+
+.div1 .div2{
+	width: 970px;
+	height: 560px;
+	margin: 20px 15px;
+	border: #499CE4 1px solid;
+}
+
+.div1 .div2 .head{
+	margin-top: -40px;
+	width:100%;
+	height: 50px;
+	background-size: 100px 40px;
+	background-image: url(../img/btn-bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.div1 .div2 .head p{
+	color: white;
+	padding: 12px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.div1 .div2 .form{
+	width: 760px;
+	height: 474px;
+	margin-top: 55px;
+	/* display: block; */
+}
+
+.div1 .div2 .form div {
+	width: 758px;
+	height: 40px;
+	margin-left: 10px;
+	margin-top: 30px;
+	border: 1px white solid;
+}
+
+.div1 .div2 .form div .uk_label{
+	float: left;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+.div1 .div2 .form div .uk_input{
+	width: 710px;
+	line-height: 38px;
+	margin-left: 10px;
+	background-color: #AAD5E6;
+	border: 0;
+	font-size: 14px;
+	/* 点击文本框后边框、背景变透明 */
+	outline: none;
+	background: transparent;
+}
+
+.div1 .div2 .form div .uk_input:focus{
+	background: white;
+}
+
+.div1 .div2 .form .mess {
+	width: 100%;
+	height: 170px;
+	margin-left: 10px;
+	margin-top: 30px;
+	border: 1px white solid;
+}
+
+.div1 .div2 .form .mess .uk_textarea{
+	width: 707px;
+	height: 166px;
+	/* padding-top: 10px; */
+	/* padding-bottom: 0; */
+	/* margin-top: 10px; */
+	margin-left: 10px;
+	background-color: #AAD5E6;
+	border: 0;
+	font-size: 14px;
+	/* 点击文本框后边框、背景变透明 */
+	outline: none;
+	background: transparent;
+}
+
+.div1 .div2 .form div .uk_textarea:focus{
+	background: white;
+}
+
+.div1 .div2 .form .sumbit{
+	width: 90px;
+	height: 30px;
+	margin-left: 10px;
+	margin-top: 20px;
+	background-color: red;
+	color: white;
+	font-size: 14px;
+}
+
+.div1 .div2 .form .sumbit:hover{
+	background-color: #222222;
+	cursor: pointer;
+}
