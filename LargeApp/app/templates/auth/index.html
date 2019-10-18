@@ -5,7 +5,24 @@
 		<title>留言板</title>
 		<link rel="stylesheet"  href="/static/css/index.css"/>
 	</head>
+	<script type="text/javascript">
+		function changecolor(num){
+			for(var i=1;i<=4;++i){
+				var x=document.getElementsByClassName('ly_'+i);
+				if(i==num){
+					// x[0].className="change";
+					x[0].style.backgroundColor="white";
+					x[0].style.border="1px #326CA9 solid";
+				}
+				else{
+					x[0].style.backgroundColor="";
+					x[0].style.border=""
+				}
+			}
+		}
+	</script>
 	<body>
+
 
 		<div class="div1">
 			<div class="div2">
@@ -13,31 +30,34 @@
 					<p>在线留言</p>
 				</div>
 
-				<form class="form">
-					<div class="name" >
+				<form class="form" method="post">
+					<div class="ly_1" >
 						<label class="uk_label">姓名</label>
-						<!-- onclick="changecolor1()" -->
-						<input class="uk_input"  type="text"  placeholder />
+						<!--onclick="changecolor('1')"-->
+						<input class="uk_input"  type="text" placeholder="" onclick="changecolor('1')" name="username"/>
 					</div>
 
-
-					<div class="phone">
+					<div class="ly_2">
 						<label class="uk_label">电话</label>
-						<input class="uk_input"  type="text" placeholder />
+						<!--onclick="changecolor('2')"-->
+						<input class="uk_input"  type="text" placeholder="" onclick="changecolor('2')" name="phone"/>
 					</div>
 
-					<div class="email">
+					<div class="ly_3">
 						<label class="uk_label">邮箱</label>
-						<input class="uk_input"  type="text" placeholder />
+						<!--onclick="changecolor('3')"-->
+						<input class="uk_input"  type="text"  placeholder="" onclick="changecolor('3')" name="email"/>
 					</div>
 
-					<div class="mess">
+					<div class="ly_4">
 						<label class="uk_label">留言</label>
-						<textarea class="uk_textarea"  rows="5" placeholder>
+						<!--onclick="changecolor('4')"-->
+						<textarea class="uk_textarea"  rows="5"  placeholder="" onclick="changecolor('4')" name="mess">
 						</textarea>
 					</div>
 
-					<button class="sumbit">提交</button>
+					<button class="sumbit" onclick="alert('提交成功！')">提交</button>
+
 				</form>
 
 			</div>
@@ -45,3 +65,4 @@
 
 	</body>
 </html>
+
