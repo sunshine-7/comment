@@ -1,68 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>留言板</title>
-		<link rel="stylesheet"  href="/static/css/index.css"/>
-	</head>
-	<script type="text/javascript">
-		function changecolor(num){
-			for(var i=1;i<=4;++i){
-				var x=document.getElementsByClassName('ly_'+i);
-				if(i==num){
-					// x[0].className="change";
-					x[0].style.backgroundColor="white";
-					x[0].style.border="1px #326CA9 solid";
-				}
-				else{
-					x[0].style.backgroundColor="";
-					x[0].style.border=""
-				}
-			}
-		}
-	</script>
-	<body>
+<head>
+    <meta charset="utf-8"/>
+    <title>留言板</title>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+</head>
+<script type="text/javascript">
+    function changecolor(num) {
+        for (var i = 1; i <= 4; ++i) {
+            var x = document.getElementsByClassName('ly_' + i);
+            if (i == num) {
+                // x[0].className="change";
+                x[0].style.backgroundColor = "white";
+                x[0].style.border = "1px #326CA9 solid";
+            } else {
+                x[0].style.backgroundColor = "#AAD5E6";
+                x[0].style.border = "1px white solid";
+            }
+        }
+    }
+</script>
+<body>
+<div class="div1">
+    <form action="" method="get">
+        <div class="company">
+            <div class="head">
+                <p>公司介绍</p>
+            </div>
+            <div class="next">
+                <img class="img" src="/static/img/company.png">
+                <div class="text">
+                    <p>山东艾雷维特智能科技有限公司是一家以人工智能为武器、
+                        以工业升级为途径致力于解决中国广大中、小、微企业生产低下问题、
+                        达到解放生产力并最终变革生产关系的公司。</p>
+                    <p>公司总注册资金
+						{% for i in aa %}
+                        {{ i[0] }}万， 固定资产
+						{{ i[1] }}万元。总部位于山东郓城，工厂面积达
+						{{ i[2] }}平米，拥有各类工业设备
+						{{ i[3] }}多台，年营业额
+						{{ i[4] }}万元。
+                        {% endfor %}
+					</p>
+                </div>
+            </div>
+        </div>
+    </form>
 
+    <div class="div2">
+        <div class="head">
+            <p>在线留言</p>
+        </div>
 
-		<div class="div1">
-			<div class="div2">
-				<div class="head">
-					<p>在线留言</p>
-				</div>
+        <form class="form" method="post">
+            <div class="ly_1">
+                <label class="uk_label">
+                    <p>姓名</p>
+                </label>
+                <!--onclick="changecolor('1')"-->
 
-				<form class="form" method="post">
-					<div class="ly_1" >
-						<label class="uk_label">姓名</label>
-						<!--onclick="changecolor('1')"-->
-						<input class="uk_input"  type="text" placeholder="" onclick="changecolor('1')" name="username"/>
-					</div>
+                    <input class="uk_input" type="text" autocomplete="off" placeholder="" onclick="changecolor('1')" name="username"/>
+            </div>
 
-					<div class="ly_2">
-						<label class="uk_label">电话</label>
-						<!--onclick="changecolor('2')"-->
-						<input class="uk_input"  type="text" placeholder="" onclick="changecolor('2')" name="phone"/>
-					</div>
+            <div class="ly_2">
+                <label class="uk_label">
+                    <p>电话</p>
+                </label>
+                <!--onclick="changecolor('2')"-->
+                <input class="uk_input" type="text" autocomplete="off" placeholder="" onclick="changecolor('2')" name="phone"/>
+            </div>
 
-					<div class="ly_3">
-						<label class="uk_label">邮箱</label>
-						<!--onclick="changecolor('3')"-->
-						<input class="uk_input"  type="text"  placeholder="" onclick="changecolor('3')" name="email"/>
-					</div>
+            <div class="ly_3">
+                <label class="uk_label">
+                    <p>邮箱</p>
+                </label>
+                <!--onclick="changecolor('3')"-->
+                <input class="uk_input" type="text" autocomplete="off" placeholder="" onclick="changecolor('3')" name="email"/>
+            </div>
 
-					<div class="ly_4">
-						<label class="uk_label">留言</label>
-						<!--onclick="changecolor('4')"-->
-						<textarea class="uk_textarea"  rows="5"  placeholder="" onclick="changecolor('4')" name="mess">
-						</textarea>
-					</div>
+            <div class="ly_4">
+                <label class="uk_label">
+                    <p>留言</p>
+                </label>
+                <!--onclick="changecolor('4')"-->
+                <textarea class="uk_textarea" rows="5" placeholder="" onclick="changecolor('4')" name="mess"></textarea>
+            </div>
 
-					<button class="sumbit" onclick="alert('提交成功！')">提交</button>
+            <button class="sumbit" onclick="alert('提交成功！')">提交</button>
 
-				</form>
+        </form>
 
-			</div>
-		</div>
+    </div>
+</div>
 
-	</body>
+</body>
 </html>
 

@@ -1,15 +1,73 @@
-body{
+html,body{
+	/* static:默认值，没有定位
+	absolute:绝对定位，相对于父级元素进行定位
+	relative:相对定位
+	fixed:固定定位,相对于浏览器窗口进行定位
+	inherit:从父元素继承定位信息 */
+	/* position: relative; */
 	margin: 0px;
-	padding: 0px;
+	height: 100%;
 	background-image: url(../img/bg.png);
-	overflow: auto;
 }
+
 .div1{
 	width: 1000px;
-	height:600px;
 	background-color: #AAD5E6;
-	margin: 50px 175px ;
-	position: absolute;
+	/* 使div1自身居中 */
+	margin: auto;
+	/* 	overflow: auto表示子元素超出父元素高度，父元素自动适应 */
+	overflow: auto;
+}
+
+.div1 .head{
+	margin-top: -40px;
+	/* width:100%; */
+	height: 50px;
+	background-image: url(../img/btn-bg.png);
+	background-size: 100px 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.div1 .head p{
+	color: white;
+	padding: 12px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.div1 .company{
+	width: 970px;
+	height: 200px;
+	margin: 40px 15px;
+	border: 1px solid #499CE4;
+}
+
+.div1 .company .next{
+	width: 100%;
+	height:170px;
+	margin-left:10px ;
+	margin-top: 20px;
+}
+
+.div1 .company .next .img{
+	width: 189px;
+	height:138px;
+	float: left;
+}
+
+.div1 .company .next .text{
+	width: 736px;
+	height: 134px;
+	margin-left: 10px;
+	float: left;
+}
+
+.div1 .company .next .text p{
+	color: #666666;
+	font-size: 14px;
+	margin: 0px 0px 20px;
 }
 
 .div1 .div2{
@@ -19,87 +77,70 @@ body{
 	border: #499CE4 1px solid;
 }
 
-.div1 .div2 .head{
-	margin-top: -40px;
-	width:100%;
-	height: 50px;
-	background-size: 100px 40px;
-	background-image: url(../img/btn-bg.png);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-.div1 .div2 .head p{
-	color: white;
-	padding: 12px;
-	font-size: 16px;
-	font-weight: bold;
-	text-align: center;
-}
-
 .div1 .div2 .form{
-	width: 760px;
-	height: 474px;
-	margin-top: 55px;
-	/* display: block; */
+	width: 780px;
+	margin-top: auto;
+	margin-left: 10px;
 }
 
 .div1 .div2 .form div {
-	width: 758px;
+	width: 100%;
 	height: 40px;
-	margin-left: 10px;
 	margin-top: 30px;
 	border: 1px white solid;
 }
 
 .div1 .div2 .form div .uk_label{
 	float: left;
-	padding-left: 10px;
-	padding-top: 10px;
-	font-size: 14px;
+	height: 100%;
+	width: 50px;
 }
 
-.div1 .div2 .form div .uk_input{
-	width: 710px;
-	line-height: 38px;
-	margin-left: 10px;
-	background-color: #AAD5E6;
+.div1 .div2 .form div .uk_label p{
+	/*让p标签上下充满父元素，文字就可以上下居中*/
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 14px;
+	margin: auto;
+}
+
+
+
+.div1 .div2 .form div .uk_input
+{
+	float: left;
+	width: 730px;
+	height: 38px;
 	border: 0;
 	font-size: 14px;
+	font-family: "微软雅黑", "黑体";
+	/*background-color: #AAD5E6;*/
 	/* 点击文本框后边框、背景变透明 */
 	outline: none;
 	background: transparent;
+
 }
 
-.div1 .div2 .form div .uk_input:focus{
-	background: white;
-}
-
-.div1 .div2 .form .mess {
+.div1 .div2 .form .ly_4 {
 	width: 100%;
-	height: 170px;
-	margin-left: 10px;
-	margin-top: 30px;
+	height: 180px;
+	margin-top: 26px;
 	border: 1px white solid;
 }
 
-.div1 .div2 .form .mess .uk_textarea{
-	width: 707px;
-	height: 166px;
-	/* padding-top: 10px; */
-	/* padding-bottom: 0; */
-	/* margin-top: 10px; */
-	margin-left: 10px;
-	background-color: #AAD5E6;
+.div1 .div2 .form .ly_4 .uk_textarea{
+	width: 725px;
+	height: 155px;
 	border: 0;
 	font-size: 14px;
+	margin: 10px 0px;
+	font-family: "微软雅黑", "黑体";
 	/* 点击文本框后边框、背景变透明 */
 	outline: none;
 	background: transparent;
-}
-
-.div1 .div2 .form div .uk_textarea:focus{
-	background: white;
+	overflow-y:hidden;
+	/*去掉右下角的斜杠*/
+	resize: none;
 }
 
 .div1 .div2 .form .sumbit{
